@@ -1,0 +1,120 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 31 41 55;
+
+    --card: 255 255 255;
+    --card-foreground: 31 41 55;
+
+    --popover: 255 255 255;
+    --popover-foreground: 31 41 55;
+
+    --primary: 31 41 55;
+    --primary-foreground: 255 255 255;
+
+    --secondary: 156 163 175;
+    --secondary-foreground: 31 41 55;
+
+    --muted: 156 163 175;
+    --muted-foreground: 107 114 128;
+
+    --accent: 156 163 175;
+    --accent-foreground: 31 41 55;
+
+    --destructive: 220 38 38;
+    --destructive-foreground: 255 255 255;
+
+    --border: 209 213 219;
+    --input: 209 213 219;
+    --ring: 31 41 55;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 107 114 128;
+    --sidebar-primary: 31 41 55;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 156 163 175;
+    --sidebar-accent-foreground: 31 41 55;
+    --sidebar-border: 209 213 219;
+    --sidebar-ring: 209 213 219;
+  }
+
+  .dark {
+    --background: 31 41 55;
+    --foreground: 255 255 255;
+
+    --card: 31 41 55;
+    --card-foreground: 255 255 255;
+
+    --popover: 31 41 55;
+    --popover-foreground: 255 255 255;
+
+    --primary: 255 255 255;
+    --primary-foreground: 31 41 55;
+
+    --secondary: 75 85 99;
+    --secondary-foreground: 255 255 255;
+
+    --muted: 75 85 99;
+    --muted-foreground: 156 163 175;
+
+    --accent: 75 85 99;
+    --accent-foreground: 255 255 255;
+
+    --destructive: 127 29 29;
+    --destructive-foreground: 255 255 255;
+
+    --border: 75 85 99;
+    --input: 75 85 99;
+    --ring: 156 163 175;
+    --sidebar-background: 31 41 55;
+    --sidebar-foreground: 156 163 175;
+    --sidebar-primary: 209 213 219;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 75 85 99;
+    --sidebar-accent-foreground: 156 163 175;
+    --sidebar-border: 75 85 99;
+    --sidebar-ring: 209 213 219;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .animate-page-enter {
+    animation: fade-in 0.4s ease-out;
+  }
+}
+
+@layer utilities {
+  .glassmorphic {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(209, 213, 219, 0.2);
+  }
+
+  .neumorphic {
+    background: #ffffff;
+    box-shadow: 5px 5px 10px #e5e7eb, -5px -5px 10px #ffffff;
+  }
+
+  .neumorphic:hover {
+    box-shadow: 8px 8px 16px #e5e7eb, -8px -8px 16px #ffffff, inset 2px 2px 4px #e5e7eb, inset -2px -2px 4px #ffffff;
+  }
+
+  .neumorphic:active {
+    box-shadow: inset 5px 5px 10px #e5e7eb, inset -5px -5px 10px #ffffff;
+  }
+}
