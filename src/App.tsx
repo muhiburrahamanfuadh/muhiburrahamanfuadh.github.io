@@ -7,7 +7,6 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Academics from "./pages/Academics";
 import Research from "./pages/Research";
-import ResearchDetail from "./pages/ResearchDetail";
 import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import HonorsAwards from "./pages/HonorsAwards";
@@ -31,7 +30,6 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/academics" element={<Academics />} />
           <Route path="/research" element={<Research />} />
-          <Route path="/research/:id" element={<ResearchDetail />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/honors-awards" element={<HonorsAwards />} />

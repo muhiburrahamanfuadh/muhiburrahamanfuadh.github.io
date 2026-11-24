@@ -121,3 +121,32 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--bronze); outlin
 .editorial-figure-link img { display: block; max-width: 100%; max-height: 100%; object-fit: contain; width: 100%; height: 100%; }
 @media(max-width: 950px) { .editorial-themes { grid-template-columns: repeat(2,minmax(0,1fr)); } .editorial-research-card { grid-template-columns: 1fr; } .editorial-figure-link { height: 220px; } }
 @media(max-width: 590px) { .editorial-themes { grid-template-columns: 1fr 1fr; } .editorial-theme { padding: 16px 12px; min-height: 115px; } #root .editorial-theme h3 { font-size: 21px; } .editorial-research-card-images { grid-template-columns: 1fr 1fr; } .editorial-figure-link { height: 160px; } }
+
+/* November 2026 readability refinements */
+#root .editorial-intro-heading h1 { font-size: clamp(40px, 4.6vw, 64px); max-width: none; white-space: nowrap; letter-spacing: -.035em; }
+.editorial-intro-heading p { flex: 0 0 185px; }
+.editorial-nav { max-width: 1560px; gap: 20px; }
+.editorial-nav-link { font-size: 15px; font-weight: 500; }
+.editorial-nav-links { column-gap: clamp(12px, 1.1vw, 20px); }
+@media (min-width: 851px) and (max-width: 1550px) {
+  .editorial-nav { flex-wrap: wrap; justify-content: center; gap: 10px; padding-top: 14px; padding-bottom: 12px; }
+  .editorial-brand { text-align: center; }
+  .editorial-nav-links { display: flex; flex: 0 0 100%; justify-content: center; margin-left: 0; gap: 12px 23px; }
+  .editorial-menu-button { display: none; }
+}
+@media (max-width: 850px) {
+  .editorial-nav-links { display: none; }
+  .editorial-menu-button { display: inline-flex; }
+  #root .editorial-intro-heading h1 { white-space: normal; font-size: clamp(44px, 8vw, 64px); }
+  .editorial-intro-heading p { flex: auto; }
+}
+.editorial-research-card { grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr); align-items: start; }
+.editorial-research-supervisor { font-size: 13px; color: var(--ink-soft); margin: 0 0 13px; }
+.editorial-research-designation { color: #7a7067; }
+.editorial-research-publication { font-size: 13px; line-height: 1.8; color: var(--ink-soft); margin: 0 0 20px; }
+.editorial-research-summary { font-size: 14px; margin-bottom: 13px; }
+.editorial-research-affiliation { font-size: 13px; }
+.editorial-figure-link { height: auto; min-height: 180px; padding: 8px; }
+.editorial-figure-link img { max-height: 330px; width: 100%; height: auto; object-fit: contain; }
+@media(max-width: 950px) { .editorial-research-card { grid-template-columns: 1fr; } }
+@media(max-width: 590px) { .editorial-research-card-images { grid-template-columns: 1fr; } }

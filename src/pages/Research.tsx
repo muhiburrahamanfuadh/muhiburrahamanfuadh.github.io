@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import AnimatedSection from '../components/AnimatedSection';
 import { researchProjects } from '../data/researchProjects';
@@ -35,15 +34,17 @@ export default function Research() {
             <div className="editorial-research-card-copy">
               <div className="editorial-research-index">{String(index+1).padStart(2,'0')} / RESEARCH PROJECT</div>
               {project.isThesis && <span className="editorial-thesis-tag">UNDERGRADUATE THESIS</span>}
-              <h3><Link to={`/research/${project.id}`}>{project.title}</Link></h3>
-              <p className="editorial-research-affiliation">{project.lab}</p>
+              <h3>{project.title}</h3>
+              <p className="editorial-research-affiliation"><strong>Laboratory:</strong> {project.lab}</p>
+              <p className="editorial-research-supervisor"><strong>Supervisor:</strong> {project.advisor} <span className="editorial-research-designation">— {project.advisorDesignation}</span></p>
               <p className="editorial-research-summary">{project.description}</p>
-              <Link className="editorial-research-action" to={`/research/${project.id}`}>View Details <span aria-hidden="true">→</span></Link>
+              {project.isThesis && <p className="editorial-research-publication">A manuscript developed from this undergraduate thesis was published in <em>International Communications in Heat and Mass Transfer</em> (Q1, Impact Factor: 6.2), titled <strong>“Flow Boiling Transitions of Binary Mixture over Functionally Graded Wettability Surfaces: A Molecular Dynamics Study.”</strong></p>}
+              <a className="editorial-research-action" href="/cv/Muhibur_Rahaman_Fuadh_CV.pdf" target="_blank" rel="noopener noreferrer">View Manuscript <span aria-hidden="true">↗</span></a>
             </div>
             <div className="editorial-research-card-images">
-              {project.images.map((img,i)=><Link to={`/research/${project.id}`} key={img} aria-label={`View ${project.title}, figure ${i+1}`} className="editorial-figure-link">
+              {project.images.map((img,i)=><div key={img} className="editorial-figure-link">
                 <img src={img} alt={`Scientific figure ${i+1}: ${project.title}`} loading="lazy" />
-              </Link>)}
+              </div>)}
             </div>
           </article>
         </AnimatedSection>)}

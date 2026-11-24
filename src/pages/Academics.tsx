@@ -64,7 +64,7 @@ const Academics = () => {
                     <p>Awarded to the top meritorious students in the department.</p>
                   </div>
                   <div>
-                    <h4 className="text-lg font-light text-gray-900 mb-2">RQMO Advanced Materials Academy Award</h4>
+                    <h4 className="text-lg font-light text-gray-900 mb-2">RQMP Advanced Materials Academy Award (Cohort-3)</h4>
                     <p>Recognizes top student researchers with outstanding research ideas and strong academic and research profiles.</p>
                   </div>
                   <div>

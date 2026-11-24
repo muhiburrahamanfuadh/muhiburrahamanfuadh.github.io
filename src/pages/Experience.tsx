@@ -6,39 +6,6 @@ import GlassmorphicCard from '../components/GlassmorphicCard';
 import { ExternalLink, GraduationCap, Briefcase } from 'lucide-react';
 
 const Experience = () => {
-  const teachingExperiences = [
-    {
-      title: "Physics & Mathematics Tutor for Olympiads",
-      company: "Udvash",
-      description: "Tutored Physics & Mathematics for Olympiads at Udvash, the largest academic coaching platform in Bangladesh."
-    },
-    {
-      title: "Private Tutor",
-      company: "Independent",
-      description: "Privately tutored over 10 students; one of them, a Mechanical Engineering undergrad from the University of California, San Diego, achieved a 4.00/4.00 GPA that semester."
-    },
-    {
-      title: "Physics & Mathematics Tutor for Olympiads",
-      company: "Cumilla Math & Science Forum",
-      description: "Tutored Physics & Mathematics for Olympiads at Cumilla Math & Science Forum."
-    },
-    {
-      title: "Physics & Mathematics Tutor for Olympiads",
-      company: "Abdus-Sattar Khan Science Society Cumilla",
-      description: "Tutored Physics & Mathematics for Olympiads at Abdus-Sattar Khan Science Society Cumilla."
-    },
-    {
-      title: "Physics, Chemistry & Mathematics Tutor",
-      company: "Prayash Classes",
-      description: "Tutored Physics, Chemistry & Mathematics at Prayash Classes."
-    },
-    {
-      title: "Physics, Chemistry & Mathematics Tutor",
-      company: "ABAKASH Welfare Association",
-      description: "Tutored Physics, Chemistry & Mathematics at ABAKASH Welfare Association."
-    }
-  ];
-
   const researchExperiences = [
     {
       title: "Graduate Research Assistant (Incoming)",
@@ -91,7 +58,7 @@ const Experience = () => {
         <AnimatedSection>
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-              Professional & Teaching Experience
+              Research & Professional Experience
             </h1>
           </div>
         </AnimatedSection>
@@ -112,36 +79,6 @@ const Experience = () => {
                   <p className="text-lg font-light text-blue-600 mb-1">{experience.company}</p>
                   <p className="text-sm font-light text-gray-500 mb-3">{experience.duration}</p>
                   <p className="text-gray-700/80 font-light leading-relaxed">{experience.description}</p>
-                </GlassmorphicCard>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-
-        {/* Teaching Experience Section */}
-        <div className="mb-16">
-          <AnimatedSection delay={50}>
-            <div className="flex items-center justify-center mb-8">
-              <GraduationCap className="w-8 h-8 text-blue-600 mr-4" />
-              <h2 className="text-3xl font-light text-gray-900 tracking-tight text-center">Teaching Experience</h2>
-            </div>
-          </AnimatedSection>
-
-          <div className="space-y-6 max-w-4xl mx-auto">
-            {teachingExperiences.map((experience, index) => (
-              <AnimatedSection key={index} delay={100 + index * 60}>
-                <GlassmorphicCard className="p-6">
-                  <div className="mb-3">
-                    <h3 className="text-xl font-light text-gray-900 mb-1 tracking-tight">
-                      {experience.title}
-                    </h3>
-                    <p className="text-lg font-light text-blue-600 mb-2">
-                      {experience.company}
-                    </p>
-                  </div>
-                  <p className="text-gray-700/80 font-light leading-relaxed">
-                    {experience.description}
-                  </p>
                 </GlassmorphicCard>
               </AnimatedSection>
             ))}

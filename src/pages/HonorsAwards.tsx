@@ -38,11 +38,6 @@ const HonorsAwards = () => {
       description: "Academic excellence in JSC, SSC, and HSC examinations."
     },
     {
-      title: "Research Grant",
-      organization: "RISE-BUET-2025",
-      year: "2025"
-    },
-    {
       title: "Finalist – Rocketry Innovation Challenge 2022",
       organization: "Rocketry Innovation Challenge",
       year: "2022"
