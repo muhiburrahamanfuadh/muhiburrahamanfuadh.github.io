@@ -17,7 +17,6 @@ export default function Research() {
       <AnimatedSection>
         <span className="editorial-section-number">RESEARCH / PROFILE</span>
         <h1 className="editorial-research-title">Research</h1>
-        <p className="editorial-research-lead">My research brings together computational physics, materials science, and data-driven modeling, with interests ranging from nanoscale thermal phenomena to advanced materials for sustainable energy.</p>
       </AnimatedSection>
       <AnimatedSection delay={80}>
         <h2 className="editorial-research-subheading">Research Themes</h2>
@@ -39,7 +38,11 @@ export default function Research() {
               <p className="editorial-research-supervisor"><strong>Supervisor:</strong> {project.advisor} <span className="editorial-research-designation">— {project.advisorDesignation}</span></p>
               <p className="editorial-research-summary">{project.description}</p>
               {project.isThesis && <p className="editorial-research-publication">A manuscript developed from this undergraduate thesis was published in <em>International Communications in Heat and Mass Transfer</em> (Q1, Impact Factor: 6.2), titled <strong>“Flow Boiling Transitions of Binary Mixture over Functionally Graded Wettability Surfaces: A Molecular Dynamics Study.”</strong></p>}
-              <a className="editorial-research-action" href="/cv/Muhibur_Rahaman_Fuadh_CV.pdf" target="_blank" rel="noopener noreferrer">View Manuscript <span aria-hidden="true">↗</span></a>
+              {project.isThesis ? (
+                <a className="editorial-research-action" href="https://doi.org/10.1016/j.icheatmasstransfer.2026.113195" target="_blank" rel="noopener noreferrer" aria-label="View published undergraduate thesis manuscript via DOI">View Manuscript <span aria-hidden="true">↗</span></a>
+              ) : (
+                <button className="editorial-research-action editorial-research-action-disabled" type="button" disabled title="Manuscript link not yet available">View Manuscript <span aria-hidden="true">↗</span></button>
+              )}
             </div>
             <div className="editorial-research-card-images">
               {project.images.map((img,i)=><div key={img} className="editorial-figure-link">

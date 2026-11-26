@@ -10,7 +10,7 @@ const Experience = () => {
     {
       title: "Graduate Research Assistant (Incoming)",
       company: "Kirk H. Bevan Research Group, McGill University",
-      duration: "Incoming (as stated in CV)",
+      duration: "",
       description: "Advisor: Dr. Kirk H. Bevan, Materials Engineering; co-advisor: Dr. Hong Guo, Physics."
     },
     {
@@ -77,7 +77,7 @@ const Experience = () => {
                 <GlassmorphicCard className="p-6">
                   <h3 className="text-xl font-light text-gray-900 mb-1 tracking-tight">{experience.title}</h3>
                   <p className="text-lg font-light text-blue-600 mb-1">{experience.company}</p>
-                  <p className="text-sm font-light text-gray-500 mb-3">{experience.duration}</p>
+                  {experience.duration && <p className="text-sm font-light text-gray-500 mb-3">{experience.duration}</p>}
                   <p className="text-gray-700/80 font-light leading-relaxed">{experience.description}</p>
                 </GlassmorphicCard>
               </AnimatedSection>

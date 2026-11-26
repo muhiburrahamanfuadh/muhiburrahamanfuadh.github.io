@@ -42,38 +42,24 @@ const HonorsAwards = () => {
       organization: "Rocketry Innovation Challenge",
       year: "2022"
     },
-    {
-      title: "Perfect Attendance Award",
-      organization: "Comilla Victoria Govt. College",
-      year: "2020"
-    },
-    {
-      title: "Teacher of the Year",
-      organization: "ABAKASH Welfare Foundation",
-      year: "2018"
-    }
+
   ];
 
   const olympiadAchievements = [
     {
-      title: "Bangladesh Physics Olympiad",
+      title: "Bangladesh Physics Olympiad (BDPhO)",
       achievement: "Regional Medalist",
-      duration: "2018 – 2020"
+      duration: "2018–2020"
     },
     {
-      title: "Mathematical Olympiad",
+      title: "Bangladesh Mathematical Olympiad (BDMO)",
       achievement: "Regional Winner",
-      duration: "2019 – 2020"
+      duration: "2019–2020"
     },
     {
-      title: "Bangladesh National Science Olympiad",
-      achievement: "Honorable Mention in Regionals",
-      year: "2019"
-    },
-    {
-      title: "Astronomy & Science Olympiad",
+      title: "Bangladesh Astronomy and Science Olympiad (BDOAA)",
       achievement: "Regional Medalist",
-      year: "2019"
+      duration: "2019"
     }
   ];
 

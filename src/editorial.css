@@ -150,3 +150,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--bronze); outlin
 .editorial-figure-link img { max-height: 330px; width: 100%; height: auto; object-fit: contain; }
 @media(max-width: 950px) { .editorial-research-card { grid-template-columns: 1fr; } }
 @media(max-width: 590px) { .editorial-research-card-images { grid-template-columns: 1fr; } }
+
+/* Preserve the manuscript button design while disabling unavailable publications. */
+.editorial-research-action-disabled, .editorial-research-action-disabled:hover { opacity: .48; cursor: not-allowed; background: var(--bronze); color: #fff; border: 0; }
